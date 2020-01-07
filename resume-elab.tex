@@ -1,0 +1,224 @@
+% !TEX program = xelatex
+% This is my resume
+% by ice1000
+
+\documentclass{resume}
+
+% \usepackage{lastpage}
+% \usepackage{fancyhdr}
+\usepackage{linespacing_fix} % disable extra space before next section
+
+\begin{document}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \renewcommand\headrulewidth{0pt}
+% \cfoot{\thepage\ of \pageref{LastPage}}
+
+\name{Tesla Ice Zhang}
+
+\basicInfo{
+  \email{ice1000kotlin@foxmail.com} \textperiodcentered\
+  \phone{(1) 717-728-6526} \textperiodcentered\
+  \github[ice1000]{https://github.com/ice1000} \textperiodcentered\
+  \homepage{https://ice1000.org}
+  % \linkedin[user]{https://www.linkedin.com/in/user}
+}
+
+\section{Education}
+\datedsubsection{\textbf{The Pennsylvania State University (PSU)}, PA, US}{08/2018 -- Current}
+  Major: Computer Science, Anticipated Graduation Date: 06/2022, GPA 3.20/4.00
+
+\section{Work Experience}
+\datedsubsection{\textbf{Sourcebrella Inc.}, Shenzhen, China}{02/2018 -- 07/2018}
+\role{Static Analysis}{Compiler Front-End, IDE Plugin Dev Intern}
+\begin{itemize}
+  \item Created IntelliJ/CLion/Eclipse plugin for the Pinpoint analyzer. Co-worked on the SonarQube plugin.
+  \item Created a multi-threading cross Java/Kotlin source code indexer which can index Hadoop within 4 minutes.
+  \item Learned a lot about Linux programming and the Clang/LLVM codebase.
+\end{itemize}
+
+\datedsubsection{\textbf{PingCAP}, Remote}{08/2018 -- 08/2019}
+\role{Distributed Storage Systems}{TiKV Intern - Ecosystem Team}
+\begin{itemize}
+  \item Improved many TiKV-relevant libraries, like
+    optimizing the performance of
+    \href{https://docs.rs/crate/grpcio} {grpcio},
+    adding new features to
+    \href{https://docs.rs/crate/procinfo} {procinfo}.
+  \item Helped to migrate the Protocol-Buffer library used by TiKV and its Raft implementation.
+  \item Learned a lot about Rust programming, distributed system, and databases.
+\end{itemize}
+
+\datedsubsection{\textbf{JetBrains}, Remote}{01/2020 -- Present}
+\role{HoTT and Dependent Types}{Theorem Prover development Intern}
+
+\section{Personal Projects}
+% \datedsubsection{\textbf{FriceEngine}}{\url{https://icela.github.io/}}
+% % \role{Kotlin, C\#, Racket, Ruby}{Founder and main contributer to the Kotlin/C\#/Ruby version}
+% A multilingual, natively-written, easy-to-use game engine series.
+% \begin{itemize}
+%   \item Based on life cycle / utility APIs, based on each languages' built-in GUI framework,
+%     easy to install.
+%   \item GitHub issues / milestones are used as task / version managing tools, nice changelogs.
+%   \item A JavaFX-based drag-and-drop GUI designer, generates multilingual codes for each language.
+% \end{itemize}
+
+\datedsubsection{\textbf{DevKt}}{\url{https://github.com/ice1000/dev-kt}}
+Cross-platform lightweight code editor / Kotlin IDE
+\begin{itemize}
+  \item Built-in Java/Kotlin highlights and completion, that can support other languages
+    via plugins (transplantable from JetBrains IDE's).
+    Has extra build \& run support for Kotlin.
+  \item Flexible architecture, decoupled high-level logic with UI, migration to other UI frameworks is easy.
+  \item Provides fine-grained highlight color and keymap settings, supports hot reload.
+\end{itemize}
+
+\datedsubsection{\textbf{Voile}}{\url{https://github.com/owo-lang/voile-rs}}
+Experimental dependently-typed programming language with row-polymorphism
+\begin{itemize}
+  \item Supports dependent types, meta variable unification, and non-dependent row-polymorphic record and variant.
+  \item Supports cumulative universe levels and uses a universe lifting operation to get rid of Set$\omega$.
+  \item Implements CLI parser / source code parser and interactive REPL with the help of Rust language's ecosystem.
+\end{itemize}
+
+\datedsubsection{\textbf{JetBrains}, Remote}{01/2020 -- Present}
+\role{HoTT and Dependent Types}{Theorem Prover Dev Intern}
+
+% \datedsubsection{\textbf{minitt-rs}}{\url{https://github.com/owo-lang/minitt-rs}}
+% Experimental dependently-typed programming language, based on \href{http://www.cse.chalmers.se/~bengt/papers/GKminiTT.pdf} {Mini-TT}
+% \begin{itemize}
+  % \item Supports $\Pi$ types (return type depends on input value), $\Sigma$ types (tuple's members' type depend on members' values), sum types and case-split.
+  % \item Extendes the type system with subtyping on first-class sum types while still supports recursive types.
+  % \item Implements CLI parser / source code parser and interactive REPL with the help of Rust language's ecosystem.
+% \end{itemize}
+
+% \datedsubsection{\textbf{Lice language}}{\url{https://github.com/lice-lang/lice}}
+% \role{Kotlin, Java}{Founder and main contributer}
+% Scalable programming language running on JVM
+% \begin{itemize}
+  % \item Supports lambda with and lazy (call by need)/macro (call by name)/strict (call by value).
+  % \item About 1/20 of Java's (Hotspot 8u151) performance, provides Java interaction and script engine support.
+  % \item Provides CLI REPL with GHCi-style code completion/colored output and JetBrains.
+    % IDE plugin supporting semantic-based highlights, completion, go-to-definition, rename, eval-and-replace, quick fixes, etc.
+% \end{itemize}
+
+\datedsubsection{\textbf{IntelliJ Pest}}{\url{https://github.com/pest-parser/intellij-pest}}
+Pest (parser generator written in Rust) plugin for JetBrains IDEs
+\begin{itemize}
+  \item Semantic-based highlighting, completion, navigation, definition extraction/inlining, and Rust plugin integration.
+  \item Provides live preview -- test grammar files by dynamically highlighting user code according to the grammar.
+  \item Supports exporting the highlighted user code to HTML format.
+\end{itemize}
+
+% \datedsubsection{\textbf{Julia-IntelliJ}}{\url{https://github.com/JuliaEditorSupport/julia-intellij}}
+% Julia plugin for JetBrains IDEs
+% \begin{itemize}
+% \item Semantic-based highlighting, quick fixes, completion, parameter hint, special input mode for Unicode characters.
+% \item Use Markdown plugin to highlight doc strings, provides REPL and SciView (showing the output of Plot libraries).
+% \end{itemize}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+%% \section{\faHeartO\ Achievements}
+%% \datedline{}{Aug. 2017}
+
+\section{Skills}
+\begin{itemize}
+  \item \textbf{Programming Languages}:
+    \textbf{multilingual} (not limited to any specific language),
+    and especially experienced in Java/Kotlin/Rust/C\#/Agda/Haskell,
+    comfortable with Dart/C/C++/F\#/F$\star$/Idris/Perl/Arend (in random order).
+
+  % compiler theories
+  \item \textbf{Compilers}:
+    understand various program representations such as Control Flow Graphs
+    and A-Normal Form.
+    Familiar with most parser generators, understand layout syntax parsing.
+
+  % language Kotlin
+  \item \textbf{Kotlin/Java}:
+    \textbf{4 years} of experience,
+    \textbf{4} projects collected in
+    \href{https://kotlin.link/?q=ice} {Awesome Kotlin},
+    familiar with JNI, Gradle, and Swing,
+    understand Contract DSL and Kotlin coroutines,
+    did some code analysis with Kotlin's compiler.
+
+  \item \textbf{Type System}:
+    understand Martin-L\"{o}f Type Theory, coinduction and Cubical Type Theory,
+    currently studying Homotopy Type Theory,
+    familiar with Idris, Agda (\textbf{2 years} of experience, contributor),
+    F$\star$, Arend and some Coq.
+    \subitem Source code studied: Agda, Idris, MiniAgda, Mini-TT, elaboration-zoo and Arend.
+
+  \item \textbf{JetBrains MPS}:
+    understand concepts and applications of \textbf{Language-Oriented Programming}.
+
+  \item \textbf{IDE Toolings}:
+    \textbf{3 years} of experience,
+    familiar with the IntelliJ Platform infrastructure and overall
+    architecture (created the
+    \href{https://plugins.jetbrains.com/plugin/10413}
+         {Julia plugin},
+    \href{https://plugins.jetbrains.com/plugin/12176}
+         {DTLC plugin},
+    \href{https://plugins.jetbrains.com/plugin/12046}
+         {Pest plugin} and many others), also have experience with Eclipse/SonarQube
+    plugin development
+
+  % platforms I am familiar with
+  \item \textbf{Mobile Development}:
+    \textbf{2 years} of experience,
+    Android (Java, Kotlin (Anko)), Fuchsia (Flutter).
+
+  \item \textbf{Developing Tools}:
+    can adapt to any editors/OSs, usually use JetBrains IDEs and Emacs under Ubuntu
+    and Windows Subsystem of Linux,
+    have experience with team collaboration tools like YouTrack,
+    Jira, GitHub, BitBucket, Coding.net, Tower.
+\end{itemize}
+
+% \section{\faHeartO\ Honors and Awards}
+% \datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
+% \datedline{Other awards}{2015}
+
+\section{Miscellaneous}
+\begin{itemize}
+  \item Bintray profile: \url{https://bintray.com/ice1000}, for publishing useful JVM libraries
+  \item Crates.io profile: \url{https://crates.io/users/ice1000}, for publishing interesting Rust libraries
+  \item IntelliJ Plugin developer profile:
+    \url{https://plugins.jetbrains.com/author/10a216dd-c558-4aaf-aa8a-723f431452fb}
+  \item Research profile: \url{https://personal.psu.edu/yqz5714/}
+  %% \item Books about formal verification I've written: \url{https://github.com/ice1000/Books}
+  \item Languages: English - fluent (TOEFL 100), Chinese - native speaker
+  %%   pull-requested (functional improvements) to organizations like \textit{Microsoft, JetBrains, Ruby, Dropbox, PingCAP, TiKV},
+  %%   projects like \textit{agda, imgui, shields.io, intellij-solidity, IntelliJ-EmmyLua, intellij-haskell}
+  \item Opensource Contributions: \url{https://ice1000.org/opensource-contributions/} \\
+    member of \textsf{JuliaEditorSupport}, \textsf{agda}, \textsf{pest-parser}, \textsf{EmmyLua} and others,
+    contributed to \textsf{agda, KaTeX, shields.io, raft-rs, grpc-rs, intellij-solidity, intellij-haskell,
+    intellij-rust, rust-analyzer}
+    and other projects
+    (apart from organization ones)
+  \item StackOverflow: \url{https://tinyurl.com/y5cmw3dz},
+    3000+ reputations, also active on \href{https://stackexchange.com/users/9532102/} {other StackExchange sites}
+  \item Get the latest version of this resume: \url{https://tinyurl.com/y2v59t36}
+  \item Get the simplified version of this resume: \url{https://tinyurl.com/y8xdlfug}
+  \item Get the Chinese version of this resume: \url{https://tinyurl.com/ya4urea8}
+  \item \textbf{1 dan} on
+    \href{https://www.codewars.com/users/ice1000} {CodeWars},
+    ranked \#31 on the whole site,
+    solving and making new problems primarily in Haskell, Agda and Idris
+  \item Love making friends
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
+
